@@ -1,0 +1,99 @@
+@import "./config";
+
+html,
+body {
+  color: $text-color;
+  font-size: 18px; // the "base size" = 1rem
+  line-height: 140%;
+
+  // resets
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background: rgb(0, 0, 0);
+  list-style: none;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+  max-height: 5em;
+  min-height: 3em;
+  font-family: $headings-font-family;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 (3 * $vertical-space) 0;
+}
+.box {
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  // border-style: solid;
+  // border: black;
+  // border-width: thick;
+}
+.flex {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: unset;
+  justify-content: center;
+  display: flex;
+  height: 200px;
+  width: 2000px;
+  align-items: center;
+}
+.container {
+  position: relative;
+  display: flex;
+  min-width: 30%;
+}
+
+p,
+ul,
+ol,
+li {
+  // vertical rhythm defined by bottom margins
+  margin: 0 0 $vertical-space 0;
+}
+
+.App {
+  // to center the app in the middle of the page
+  max-width: 40rem;
+  margin: 0 auto;
+
+  // but add some spacing above
+  margin-top: 2rem;
+
+  // horizontal (internal) spacing
+  padding: 0 1rem;
+}
+.nav {
+  position: relative;
+}
+
+button {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  border-style: none;
+  margin: 0.3em;
+
+  font-family: inherit;
+  transition: all 0.2s ease;
+
+  // other styles
+
+  &:hover {
+    // hover styles
+  }
+  &:active {
+    // styles for when the button is being pressed
+  }
+  &:focus {
+    // styles for when it has focus (e.g. with keyboard navigation)
+  }
+}
