@@ -48,7 +48,7 @@ function App() {
         <Navigation />
       </div>
 
-      <div className="main pt-4">
+      <div className="main pt-4 col-md-12">
         <main className="container-fluid">
           <div className="row">
             <div className="col-md col-lg-3">
@@ -71,35 +71,34 @@ function App() {
                 </div>
               </div>
             </div>
+            <div className="col-md">
+              <div className="col-lg-2">
+                <div className="card mb-4 mainCard box">
+                  <div class="card-body pb-0">
+                    <Title content="Like couter" />
+                    <LikeCounter />
+                  </div>
+                </div>
+              </div>
 
-            <div className="col-lg-2">
-              <div className="card mb-4 mainCard box">
-                <div class="card-body pb-0">
-                  <Title content="Like couter" />
-                  <LikeCounter />
+              <div className="col-lg-2">
+                <div className="card mb-4 mainCard box">
+                  <div class="card-body pb-0">
+                    <Title content="Scoreboard" />
+                    <Scoreboard />
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-6 col-lg-5">
+                <div className="card mb-4 mainCard box">
+                  <div class="card-body pb-0">
+                    <Title content="Dog watch" />
+                    <Dogs />
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div className="col-lg-2">
-              <div className="card mb-4 mainCard box">
-                <div class="card-body pb-0">
-                  <Title content="Scoreboard" />
-                  <Scoreboard />
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4">
-              <div className="card mb-4 mainCard box">
-                <div class="card-body pb-0">
-                  <Title content="Dog watch" />
-                  <Dogs />
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-3"></div>
           </div>
         </main>
       </div>
