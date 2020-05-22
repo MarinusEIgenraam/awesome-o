@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Pokemon(props) {
   return (
-    <div className="">
+    <div className="container-fluid">
       <div className="card shadow-sm mb-4 col-lg-5">
         <div class="card-body">
           <h5 class="card-title">{props.name}</h5>

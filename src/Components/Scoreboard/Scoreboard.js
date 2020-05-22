@@ -1,7 +1,8 @@
 // src/components/Scoreboard.js
 import React, { useState } from "react";
 import Player from "./Player";
-import Title from "../Title";
+import "./Scoreboard.scss";
+import AddPlayerForm from "./AddPlayerForm";
 
 export default function Scoreboard() {
   const [sort_by, set_sort_by] = useState("score"); // either "score" or "name"
@@ -61,8 +62,31 @@ export default function Scoreboard() {
     set_players(newArray);
   };
 
+  const addPlayer = (name) => {
+    console.log("Let's add a new player with the name:", name);
+    const newName = name;
+
+    set_players([
+      ...players,
+      { id: players.length + 1, name: newName, score: 0 },
+    ]);
+  };
+
+  // const addAPatientToACountry = (id) => {
+  //   console.log("this is the function in the parent", id);
+  //   const newArray = countries.map((countryCard) => {
+  //     if (countryCard.id === id) {
+  //       const countryCardAddedPatient = countryCard;
+  //       countryCardAddedPatient.patientCounter = countryCard.patientCounter + 1;
+  //       return countryCardAddedPatient;
+  //     }
+  //     return countryCard;
+  //   });
+  //   set_countries(newArray);
+  // };
+
   return (
-    <div className="Scoreboard">
+    <div className="">
       <p>
         Sort order:{" "}
         <select onChange={change_sorting}>
@@ -83,6 +107,7 @@ export default function Scoreboard() {
           />
         </>
       ))}
+      <AddPlayerForm addPlayer={addPlayer} />
     </div>
   );
 }

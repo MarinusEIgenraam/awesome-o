@@ -55,24 +55,23 @@ function App() {
               <div className="card box">
                 <div class="card-body pb-0">
                   <Title content="Pokemon" />
-                  <div className="">
-                    {all_pokemon.map((pokemon) => (
-                      <>
-                        <Pokemon
-                          name={pokemon.name}
-                          weight={pokemon.weight}
-                          awesome={pokemon.awesome}
-                          terrifying={pokemon.terrifying}
-                          abilities={pokemon.abilities}
-                        />
-                      </>
-                    ))}
-                  </div>
+                  {all_pokemon.map((pokemon) => (
+                    <>
+                      <Pokemon
+                        name={pokemon.name}
+                        weight={pokemon.weight}
+                        awesome={pokemon.awesome}
+                        terrifying={pokemon.terrifying}
+                        abilities={pokemon.abilities}
+                      />
+                    </>
+                  ))}
                 </div>
               </div>
             </div>
+
             <div className="col-md">
-              <div className="col-lg-2">
+              <div className="col-lg-5">
                 <div className="card mb-4 mainCard box">
                   <div class="card-body pb-0">
                     <Title content="Like couter" />
@@ -81,7 +80,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="col-lg-2">
+              <div className="col-lg-5">
                 <div className="card mb-4 mainCard box">
                   <div class="card-body pb-0">
                     <Title content="Scoreboard" />

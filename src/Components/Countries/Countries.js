@@ -48,6 +48,20 @@ export default function Countries() {
     });
     set_countries(newArray);
   };
+
+  const addAPatientToACountry = (id) => {
+    console.log("this is the function in the parent", id);
+    const newArray = countries.map((countryCard) => {
+      if (countryCard.id === id) {
+        const countryCardAddedPatient = countryCard;
+        countryCardAddedPatient.patientCounter = countryCard.patientCounter + 1;
+        return countryCardAddedPatient;
+      }
+      return countryCard;
+    });
+    set_countries(newArray);
+  };
+
   return (
     <div>
       This component is working
