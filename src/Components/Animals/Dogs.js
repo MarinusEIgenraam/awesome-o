@@ -17,7 +17,7 @@ export default function Dog() {
       // "message": "https://images.dog.ceo/breeds/terrier-lakeland/n02095570_1590.jpg",
       // "status": "success"
       // }
-      console.log("typeof data test:", typeof response.data);
+      console.log("typeof data test:", response.data);
 
       setDog(response.data);
     } catch (error) {
@@ -26,30 +26,28 @@ export default function Dog() {
     console.log(fetching);
   }
 
-  useEffect(() => {
-    getDog();
-  }, [fetching]);
-
   function onClickMe() {
     // count = count + 1
     setCount(count + 1);
     console.log(fetching);
+    console.log(dog);
     setFetching(!fetching);
   }
+  useEffect(() => {
+    getDog();
+  }, [fetching]);
 
   return (
     <>
-      <div className="card shadow-sm mb-4">
-        <div class="card-body pb-0">
-          <h5 class="card-title">{dog.message.title}</h5>
-          <h6 class="card-subtitle mb-3 text-primary"></h6>
-          <button onClick={onClickMe}>New dog</button>
-          <p>There where {count} dogs shown here</p>
-          <p className="mb-0">
-            <img className="image-fit" src={dog.message} alt="1" />
-          </p>
-        </div>
-      </div>
+      <button onClick={onClickMe}>New dog</button>
+      <p>There where {count} dogs shown here</p>
+      <p className="mb-0">
+        <img
+          className="image-fit border border-primary"
+          src={dog.message}
+          alt="1"
+        />
+      </p>
     </>
   );
 }

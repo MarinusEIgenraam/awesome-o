@@ -3,11 +3,17 @@
 $headings-font-family: "Zilla Slab", serif;
 $headings-font-weight: 800;
 
+$font-family-title: "Zilla Slab", serif;
 $font-family-base: "Plain", sans-serif;
 
 $primary: #000000;
 $secondary: #979797;
 $light: #d3d3d3;
-$text-color: #333;
+$white: #ffffff;
+$text-color: #000000;
 
 $vertical-space: 0.5rem;
+$spacer: 0.5rem;
+
+$grid-gutter-width: 0.5rem;
+$grid-columns: 12;

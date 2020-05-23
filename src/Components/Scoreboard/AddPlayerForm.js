@@ -7,6 +7,10 @@ export default function AddPlayerForm(props) {
     props.addPlayer(name);
   };
 
+  useEffect(() => {
+    console.log("The useEffect action!");
+  }, [name]);
+
   return (
     <div className="">
       <p>
@@ -23,7 +27,4 @@ export default function AddPlayerForm(props) {
       </p>
     </div>
   );
-  useEffect(() => {
-    console.log("The useEffect action!");
-  }, [name]);
 }

@@ -1,19 +1,22 @@
 import React from "react"; // <- note the added import of useState
+import { NavLink } from "react-router-dom";
 
 export default function Navigation(props) {
   return (
     <>
       <nav class="navbar fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-          Project folder
+        <a class="navbar-brand m-4" href="#">
+          Marinus Eigenraam
         </a>
+        <NavLink to="/">Home</NavLink>
+
         <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
+          aria-expanded="true"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>

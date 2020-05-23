@@ -1,5 +1,17 @@
 @import "./config";
 
+.row.make-columns > div {
+  -moz-column-width: 19em;
+  -webkit-column-width: 19em;
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em;
+}
+.row.make-columns > div {
+  display: inline-block;
+  padding: 0.5rem;
+  width: 100%;
+}
+
 html,
 body {
   color: $text-color;
@@ -11,7 +23,7 @@ body {
   padding: 0;
 }
 nav {
-  background: rgb(0, 0, 0);
+  background: $primary;
   list-style: none;
   padding: 5px;
   display: flex;
@@ -21,32 +33,48 @@ nav {
   font-family: $headings-font-family;
 }
 
+.no-padding {
+  padding: 0rem;
+}
+.half-padding {
+  padding: 0.5rem;
+}
+.no-margin {
+  margin: 0rem;
+}
+
+.active {
+  color: white;
+  border-style: none;
+  margin: 0.3em;
+
+  font-family: inherit;
+  font-weight: bold;
+  transition: all 0.2s ease;
+
+  // other styles
+
+  &:hover {
+    // hover styles
+  }
+  &:active {
+    // styles for when the button is being pressed
+  }
+  &:focus {
+    // styles for when it has focus (e.g. with keyboard navigation)
+  }
+}
+
 h1,
 h2,
 h3 {
   margin: 0 0 (3 * $vertical-space) 0;
 }
-.box {
+.styled-shadow {
   box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
   // border-style: solid;
   // border: black;
   // border-width: thick;
-}
-.flex {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: unset;
-  justify-content: center;
-  display: flex;
-  height: 200px;
-  width: 2000px;
-  align-items: center;
-}
-.container {
-  position: relative;
-  display: flex;
-  min-width: 30%;
 }
 
 p,
@@ -77,10 +105,10 @@ button {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: black;
+  background-color: $primary;
   color: white;
   border-style: none;
-  margin: 0.3em;
+  margin: 0.3em 0.3em 0.3em 0;
 
   font-family: inherit;
   transition: all 0.2s ease;
@@ -88,6 +116,13 @@ button {
   // other styles
 
   &:hover {
+    color: $primary;
+
+    background-color: white;
+    border-style: solid;
+    border-color: $primary;
+    border-width: 0.01em;
+
     // hover styles
   }
   &:active {
