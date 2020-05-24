@@ -5,7 +5,7 @@ export default function Navigation(props) {
   return (
     <>
       <nav class="navbar fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand m-4" href="#">
+        <a class="navbar-brand m-4" href="/">
           Marinus Eigenraam
         </a>
         <NavLink to="/">Home</NavLink>
@@ -23,11 +23,11 @@ export default function Navigation(props) {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">
+            <a class="nav-item nav-link active" href="/">
               Home <span class="sr-only">(current)</span>
             </a>
-            <a class="nav-item nav-link" href="#">
-              Features
+            <a class="nav-item nav-link" href="/discover/">
+              Movies
             </a>
             <a class="nav-item nav-link" href="#">
               Pricing

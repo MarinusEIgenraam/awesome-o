@@ -33,6 +33,7 @@ export default function Dog() {
     console.log(dog);
     setFetching(!fetching);
   }
+
   useEffect(() => {
     getDog();
   }, [fetching]);

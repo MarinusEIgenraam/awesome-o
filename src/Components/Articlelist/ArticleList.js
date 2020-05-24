@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Timeout from "await-timeout";
 
 export default function ArticleList() {
   //Add a button to the top of the article list that shows the text "Clear notifications".

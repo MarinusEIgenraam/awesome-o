@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function MovieSearch() {
   const [searchText, set_searchText] = useState("The Terminator");
   const [searchState, set_searchState] = useState("Idle");
-  const [data, set_data] = useState([]);
 
   const inputHandler = (event) => {
     set_searchText(event.target.value);
@@ -19,11 +18,9 @@ export default function MovieSearch() {
   const history = useHistory();
 
   const navigateToSearch = async () => {
-    const search_movies =
-      " http://www.omdbapi.com/?apikey=e8f84148&s=" + searchText;
+    const search_movies = `http://www.omdbapi.com/?apikey=44086c16&s=${searchText}`;
     const response = await axios.get(search_movies);
     console.log("response", response.data.Search);
-    set_data(response.data.Search);
     set_searchState("Search completed");
     history.push(`/discover/${searchText}`);
   };

@@ -23,11 +23,11 @@ export default function Scoreboard() {
   function compare_score(player_a, player_b) {
     if (sort_by === "score") {
       return player_b.score - player_a.score;
-      console.log(player_a.name.localeCompare(player_b.score - player_a.score));
+      // console.log(player_a.name.localeCompare(player_b.score - player_a.score));
     }
     if (sort_by === "name") {
       return player_a.name.localeCompare(player_b.name);
-      console.log(player_a.name.localeCompare(player_b.name));
+      // console.log(player_a.name.localeCompare(player_b.name));
     }
   }
 

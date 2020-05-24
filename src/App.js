@@ -5,7 +5,8 @@ import { Route, Switch } from "react-router-dom";
 import Navigation from "./Components/Navigation";
 
 // Pages
-// import MovieSearch from "./Pages/MovieSearch";
+import DiscoverMoviesPage from "./Pages/DiscoverMoviesPage";
+import MovieDetail from "./Pages/MovieDetails";
 
 // Templates
 import BoxTemplate from "./Components/Templates/BoxTemplate";
@@ -14,12 +15,10 @@ import BoxTemplate from "./Components/Templates/BoxTemplate";
 import Dogs from "./Components/Animals/Dogs";
 import Scoreboard from "./Components/Scoreboard/Scoreboard";
 import Pokedex from "./Components/Pokemon/PokeDex";
-import DiscoverMoviesPage from "./Pages/DiscoverMoviesPage";
 // import Animals from "./Components/Animals/Animals";
 // import Title from "./Components/Title";
 import LikeCounter from "./Components/LikeCounter";
 import ArticleList from "./Components/Articlelist/ArticleList";
-import MovieDetail from "./Components/Movies/MovieDetails";
 import MovieSearch from "./Components/Movies/MovieSearch";
 
 function App() {
@@ -53,6 +52,12 @@ function App() {
                   >
                     <Scoreboard />
                   </BoxTemplate>
+                  <BoxTemplate
+                    title="LikeCounter"
+                    text="How many likes did we get?"
+                  >
+                    <LikeCounter />
+                  </BoxTemplate>
                   <BoxTemplate title="Pokemon" text="The pokedex">
                     <Pokedex />
                   </BoxTemplate>
@@ -68,8 +73,7 @@ function App() {
 
 export default App;
 
-{
-  /* <div className="card">
+/* <div className="card">
                     <img
                       className="card-img-top img-fluid"
                       src="//placehold.it/800x560"
@@ -197,4 +201,3 @@ export default App;
                       </small>
                     </p>
                   </div> */
-}

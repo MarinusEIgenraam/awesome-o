@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams, Link, useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function DiscoverMoviesPage() {
   const [searchText, set_searchText] = useState("The Terminator");
   const [data, set_data] = useState([]);
   const [searchState, set_searchState] = useState("Idle");
-  const [movie, set_Movie] = useState("");
 
-  const params = useParams();
   const history = useHistory();
-  const url = `http://www.omdbapi.com/?apikey=e8f84148&s=${searchText}`;
-  const location = useParams();
+  const url = `http://www.omdbapi.com/?apikey=44086c16&s=${searchText}`;
 
   const inputHandler = (event) => {
     set_searchText(event.target.value);
@@ -21,20 +18,12 @@ export default function DiscoverMoviesPage() {
     navigateToSearch();
   };
 
-  const search = async () => {
-    const specific_movie = `http://www.omdbapi.com/?i=${location.id}&apikey=e8f84148`;
-    const response = await axios.get(specific_movie);
-    console.log("response", response.data);
-    set_Movie(response.data);
-  };
-
   useEffect(() => {
     navigateToSearch();
   }, []);
 
   const navigateToSearch = async () => {
-    const search_movies =
-      " http://www.omdbapi.com/?apikey=e8f84148&s=" + searchText;
+    const search_movies = url;
     const response = await axios.get(search_movies);
     console.log("response", response.data.Search);
     set_data(response.data.Search);
@@ -77,6 +66,7 @@ export default function DiscoverMoviesPage() {
                       <img
                         className="card-img-top img-fluid"
                         src={film.Poster}
+                        alt={film.title}
                       />
                       <div className="card-body">
                         <h5> {film.Title} </h5>
