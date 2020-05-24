@@ -21,7 +21,7 @@ export default function MovieDetail() {
     navigateToSearch();
   };
   const navigateToSearch = async () => {
-    const search_movies = `https://www.omdbapi.com/?apikey=44086c16&s=${searchText}`;
+    const search_movies = `http://www.omdbapi.com/?apikey=44086c16&s=${searchText}`;
     const response = await axios.get(search_movies);
     console.log("response", response.data.Search);
     set_searchState("Search completed");
@@ -29,7 +29,7 @@ export default function MovieDetail() {
   };
 
   const search = async () => {
-    const specific_movie = `https://www.omdbapi.com/?i=${location.id}&apikey=44086c16&`;
+    const specific_movie = `http://www.omdbapi.com/?i=${location.id}&apikey=44086c16&`;
     const response = await axios.get(specific_movie);
     console.log("response", response.data);
     setMovie(response.data);

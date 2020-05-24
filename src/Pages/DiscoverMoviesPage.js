@@ -8,7 +8,7 @@ export default function DiscoverMoviesPage() {
   const [searchState, set_searchState] = useState("Idle");
 
   const history = useHistory();
-  const url = `http://www.omdbapi.com/?apikey=44086c16&s=${searchText}`;
+  const url = `https://www.omdbapi.com/?apikey=44086c16&s=${searchText}`;
 
   const inputHandler = (event) => {
     set_searchText(event.target.value);

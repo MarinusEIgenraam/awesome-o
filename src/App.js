@@ -20,6 +20,10 @@ import Pokedex from "./Components/Pokemon/PokeDex";
 import LikeCounter from "./Components/LikeCounter";
 import ArticleList from "./Components/Articlelist/ArticleList";
 import MovieSearch from "./Components/Movies/MovieSearch";
+import Animals from "./Components/Animals/Animals";
+import CocktailSearch from "./Components/Cocktails/CocktailSearch";
+import CocktailDetails from "./Pages/CocktailDetails";
+import CocktailBrowser from "./Pages/CocktailBrowser";
 
 function App() {
   return (
@@ -31,6 +35,8 @@ function App() {
       <Switch>
         <Route path="/moviedetails/:id" component={MovieDetail} />
         <Route path="/discover/:searchtext" component={DiscoverMoviesPage} />
+        {/* <Route path="/cocktail/:id" component={CocktailDetails} />
+        <Route path="/explore/:searchtext" component={CocktailBrowser} /> */}
         <Route
           path="/"
           render={(props) => (
@@ -40,11 +46,17 @@ function App() {
                   <BoxTemplate title="Movie finder">
                     <MovieSearch />
                   </BoxTemplate>
+                  <BoxTemplate title="Cocktail finder">
+                    <CocktailSearch />
+                  </BoxTemplate>
                   <BoxTemplate title="ArticleList">
                     <ArticleList />
                   </BoxTemplate>
                   <BoxTemplate title="Dogs" text="Many dogs">
                     <Dogs />
+                  </BoxTemplate>
+                  <BoxTemplate title="Animals" text="How awsome are animals?">
+                    <Animals />
                   </BoxTemplate>
                   <BoxTemplate
                     title="Scoreboard"
